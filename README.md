@@ -28,7 +28,7 @@ PeriodicNator é um jogo educacional interativo que testa seus conhecimentos sob
 
 ## Acesse o Jogo
 
-Você pode jogar o Desafie a Tabela Periódica clicando no seguinte link: [Desafie a Tabela Periódica]([https://seu-link-do-site.com](https://guilhermemorettodeitos.github.io/Jogo-TP/))
+Você pode jogar o PeriodicNator clicando no seguinte link: [PeriodicNator](https://guilhermemorettodeitos.github.io/Jogo-TP/)
 
 ### Acesso via QR Code
 
