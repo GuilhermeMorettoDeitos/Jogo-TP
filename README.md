@@ -36,7 +36,9 @@ Você também pode acessar o jogo escaneando o QR Code abaixo:
 
 <img src="images/qrcode.png" alt="QR Code para acessar o jogo" width="400" height="400">
 
-### Acesso à Tabela Pediódica via QR Code
+### Acesso à Tabela Pediódica
+
+Você pode acessar Pediódica clicando no seguinte link: [Tabela Pediódica](https://guilhermemorettodeitos.github.io/Tabela-Periodica/)
 
 Você também pode acessar a Tabela Periódica escaneando o QR Code abaixo:
 
