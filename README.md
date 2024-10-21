@@ -34,7 +34,7 @@ Você pode jogar o Desafie a Tabela Periódica clicando no seguinte link: [Desaf
 
 Você também pode acessar o jogo escaneando o QR Code abaixo:
 
-![QR Code para acessar o jogo](images/qrcode.png)
+<img src="images/qrcode.png" alt="QR Code para acessar o jogo" width="400" height="400">
 
 ## Licença
 
