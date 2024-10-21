@@ -1,0 +1,105 @@
+/* Estilo geral para a página */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f6; /* Cor de fundo suave */
+    background-image: url(Images/background.png);
+    background-repeat: no-repeat;
+    background-size: 100%; /* Ajusta o tamanho da imagem para 50% da largura da tela */
+    background-position: center; /* Centraliza a imagem no meio da tela */
+    background-attachment: fixed; /* Faz a imagem rolar com a página */
+    color: #333; /* Cor do texto */
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+header {
+    text-align: center; /* Centraliza o texto */
+}
+
+header h1 {
+    background-color: #f9f9f9; /* Cor de fundo clara */
+    padding: 10px 20px; /* Espaçamento interno para um melhor efeito visual */
+    border-radius: 10px; /* Cantos arredondados */
+    display: inline-block; /* Faz o fundo se ajustar ao tamanho do texto */
+    margin: 0; /* Remove margens padrão */
+    font-size: 2.5em; /* Tamanho da fonte do título */
+    color: #4CAF50; /* Cor do texto */
+}
+
+
+h1 {
+    color: #4CAF50; /* Cor do título */
+}
+
+.game-start {
+    text-align: center; /* Centraliza a seção de início do jogo */
+}
+
+button {
+    background-color: #4CAF50; /* Verde claro */
+    border: none; /* Sem borda */
+    color: white; /* Cor do texto */
+    padding: 15px 32px; /* Espaçamento interno */
+    text-align: center; /* Centraliza o texto */
+    text-decoration: none; /* Remove sublinhado */
+    display: inline-block; /* Permite que o botão seja tratado como bloco */
+    font-size: 16px; /* Tamanho da fonte */
+    margin: 4px 2px; /* Margem entre os botões */
+    border-radius: 8px; /* Bordas arredondadas */
+    cursor: pointer; /* Muda o cursor para pointer ao passar */
+    transition: background-color 0.3s; /* Efeito de transição na cor do botão */
+}
+
+button:hover {
+    background-color: #45a049; /* Efeito ao passar o mouse */
+}
+
+.game-container {
+    display: none; /* Inicialmente oculto */
+}
+
+.game-info {
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 20px; /* Espaço abaixo do texto */
+}
+
+.answer-section {
+    display: flex; /* Flexbox para alinhar elementos */
+    justify-content: center; /* Centraliza o conteúdo */
+    margin-bottom: 20px; /* Espaçamento abaixo da seção de resposta */
+    text-align: center; /* Centraliza a caixa de resposta */
+}
+
+input[type="text"] {
+    padding: 12px 20px;
+    border: 2px solid #4CAF50; /* Cor verde claro */
+    border-radius: 25px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho da fonte */
+    width: 300px; /* Largura do input */
+    margin-right: 10px; /* Margem à direita */
+}
+
+footer {
+    text-align: center; /* Centraliza o rodapé */
+    margin-top: 20px; /* Espaçamento acima do rodapé */
+}
+
+/* Estilo para o jogo terminado */
+.game-over {
+    text-align: center; /* Centraliza o conteúdo */
+}
+
+#feedback {
+    text-align: center; /* Centraliza o feedback */
+    margin-top: 10px; /* Espaço acima do feedback */
+    font-size: 1.2em; /* Aumenta o tamanho do texto */
+}
+main {
+    max-width: 800px; /* Largura máxima do contêiner */
+    margin: 0 auto; /* Centraliza o contêiner */
+    padding: 20px; /* Adiciona um pouco de espaçamento interno */
+    background-color: #fff; /* Fundo branco para o conteúdo */
+    border-radius: 10px; /* Cantos arredondados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para um efeito de profundidade */
+}

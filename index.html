@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafie a Tabela Periódica</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/logo.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>PeriodicNator</h1>
+        <p>Teste seus conhecimentos sobre os elementos químicos!</p>
+    </header>
+
+    <main>
+        <!-- Início do Jogo -->
+        <div class="game-start">
+            <h2>Escolha a Fase</h2>
+            <button id="fase1">Fase 1: Fácil</button>
+            <button id="fase2">Fase 2: Médio</button>
+            <button id="fase3">Fase 3: Difícil</button>
+        </div>
+
+        <!-- Tela do Jogo -->
+        <div class="game-container" style="display: none;">
+            <div class="game-info">
+                <h3 id="question"></h3>
+                <p><strong>Dica:</strong> <span id="hint"></span></p>
+            </div>
+            <div class="answer-section">
+                <input type="text" id="answerInput" placeholder="Digite o nome do elemento...">
+                <button id="responderBtn">Responder</button>
+            </div>
+            <div id="feedback"></div>
+        </div>
+
+        <!-- Final do Jogo -->
+        <div class="game-over" style="display: none;">
+            <h2>Parabéns, você completou o desafio!</h2>
+            <p id="finalScore"></p>
+            <button id="restartBtn">Jogar Novamente</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Guilherme Moretto Deitos. Aprenda química enquanto joga!</p>
+    </footer>
+
+    <script src="game.js"></script>
+</body>
+</html>
