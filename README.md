@@ -36,6 +36,12 @@ Você também pode acessar o jogo escaneando o QR Code abaixo:
 
 <img src="images/qrcode.png" alt="QR Code para acessar o jogo" width="400" height="400">
 
+### Acesso à Tabela Pediódica via QR Code
+
+Você também pode acessar a Tabela Periódica escaneando o QR Code abaixo:
+
+<img src="images/qrcode1.png" alt="QR Code para acessar a Tabela Periódica" width="400" height="400">
+
 ## Licença
 
 Este projeto está licenciado sob a [GNU General Public License](LICENSE).
