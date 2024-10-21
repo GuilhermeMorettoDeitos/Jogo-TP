@@ -1,7 +1,7 @@
 /* Estilo geral para a página */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f7f6; /* Cor de fundo suave */
+    background-color: #a7d7af; /* Cor de fundo suave */
     background-image: url(Images/background.png);
     background-repeat: no-repeat;
     background-size: 100%; /* Ajusta o tamanho da imagem para 50% da largura da tela */
@@ -133,7 +133,7 @@ main {
 
 @media (max-width: 400px) {
     body {
-        background-image: url('caminho/para/sua/imagem.jpg');
+        background-image: url('images/background.png');
         background-size: contain; /* Ajusta a imagem para caber na tela */
         background-position: center; /* Centraliza a imagem */
     }
