@@ -2,7 +2,7 @@
 body {
     font-family: 'Arial', sans-serif;
     background-color: #a7d7af; /* Cor de fundo suave */
-    background-image: url(Images/background.png);
+    background-image: url(images/background.png);
     background-repeat: no-repeat;
     background-size: 100%; /* Ajusta o tamanho da imagem para 50% da largura da tela */
     background-position: center; /* Centraliza a imagem no meio da tela */
@@ -35,6 +35,7 @@ h1 {
 
 .game-start {
     text-align: center; /* Centraliza a seção de início do jogo */
+    color: #333;
 }
 
 button {
@@ -125,8 +126,9 @@ footer {
 main {
     max-width: 800px; /* Largura máxima do contêiner */
     margin: 0 auto; /* Centraliza o contêiner */
-    padding: 20px; /* Adiciona um pouco de espaçamento interno */
-    background-color: #fff; /* Fundo branco para o conteúdo */
+    padding: 10px; /* Adiciona um pouco de espaçamento interno */
+    padding-bottom: 20px;
+    background-color: #f9f9f9; /* Fundo branco para o conteúdo */
     border-radius: 10px; /* Cantos arredondados */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para um efeito de profundidade */
 }
