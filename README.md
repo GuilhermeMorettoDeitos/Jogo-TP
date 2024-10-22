@@ -14,8 +14,8 @@ PeriodicNator é um jogo educacional interativo que testa seus conhecimentos sob
 
 - Escolha entre três níveis de dificuldade:
   - **Fácil**: 20 elementos, perguntas em ordem.
-  - **Médio**: 40 elementos, perguntas aleatórias.
-  - **Difícil**: Todos os elementos, perguntas aleatórias.
+  - **Médio**: 20 elementos, perguntas selecionadas (Intermediário).
+  - **Difícil**: 20, perguntas selecionadas (Difícil).
 - Sistema de pontuação que conta quantas perguntas foram respondidas corretamente.
 - Interface amigável com feedback instantâneo sobre as respostas.
 

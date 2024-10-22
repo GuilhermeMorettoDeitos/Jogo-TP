@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desafie a Tabela Periódica</title>
+    <title>PeriodicNator</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="images/logo.png" type="image/x-icon">
 </head>
@@ -36,15 +36,27 @@
         </div>
 
         <!-- Final do Jogo -->
-        <div class="game-over" style="display: none;">
-            <h2>Parabéns, você completou o desafio!</h2>
+        <div class="game-over" style="display:none;">
+            <h2>Fim do jogo!</h2>
             <p id="finalScore"></p>
+            <p id="mensagemFinal"></p> <!-- Para mostrar a mensagem personalizada -->
             <button id="restartBtn">Jogar Novamente</button>
         </div>
+        
     </main>
+
+    <!-- Botão QR Code no canto inferior direito -->
+    <button id="qrCodeBtn" class="qr-code-btn">Mostrar QR Code</button>
+    
+    <!-- Imagem QR Code oculta -->
+    <div id="qrCodeOverlay" class="qr-code-overlay" style="display: none;">
+        <img src="images/qrcode1.png" alt="QR Code">
+    </div>
 
     <footer>
         <p>&copy; 2024 Guilherme Moretto Deitos. Aprenda química enquanto joga!</p>
+        <a href="https://github.com/GuilhermeMorettoDeitos/Jogo-TP" target="_blank">Visite a página do projeto para mais informações.</a><br>
+        <a><a href="https://docs.google.com/forms/d/e/1FAIpQLScYuDQSqZP6jpLPgeDEVBFW7T2XxVuu-UVoYXUw3gP-FDZ2-w/viewform?usp=sf_link" target="_blank">Encontrou algum bug? Por favor, reporte-o clicando aqui!</a></a>
     </footer>
 
     <script src="game.js"></script>

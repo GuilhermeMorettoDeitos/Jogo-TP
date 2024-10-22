@@ -120,9 +120,59 @@ const elementos = [
     { symbol: 'Og', number: 118, name: 'Oganessônio', hint: 'Radioativo.' }
 ];
 
+const fase1Elementos = elementos.slice(0, 20); // Fase 1: Primeiros 20 elementos em ordem
+
+// Fase 2: Elementos de dificuldade intermediária (selecionados manualmente)
+const fase2Elementos = [
+    elementos[10], // Na
+    elementos[12], // Al
+    elementos[14], // P
+    elementos[16], // S
+    elementos[18], // Ar
+    elementos[19], // K
+    elementos[21], // Sc
+    elementos[22], // Ti
+    elementos[24], // Cr
+    elementos[26], // Fe
+    elementos[28], // Ni
+    elementos[30], // Zn
+    elementos[31], // Ga
+    elementos[32], // Ge
+    elementos[34], // Br
+    elementos[36], // Kr
+    elementos[38], // Sr
+    elementos[40], // Zr
+    elementos[42], // Mo
+    elementos[44]  // Rh
+];
+
+// Fase 3: Elementos mais difíceis (selecionados manualmente)
+const fase3Elementos = [
+    elementos[57], // La
+    elementos[58], // Ce
+    elementos[59], // Pr
+    elementos[60], // Nd
+    elementos[61], // Pm
+    elementos[62], // Sm
+    elementos[63], // Eu
+    elementos[64], // Gd
+    elementos[65], // Tb
+    elementos[66], // Dy
+    elementos[67], // Ho
+    elementos[68], // Er
+    elementos[69], // Tm
+    elementos[70], // Yb
+    elementos[71], // Lu
+    elementos[89], // Ac
+    elementos[92], // U
+    elementos[94], // Pu
+    elementos[95], // Am
+    elementos[98]  // Cf
+];
+
 // Variáveis globais
-let nivelAtual = 0; // Adicionado para controlar o nível
-let indiceElemento = 0; // Adicionado para controlar o í
+let nivelAtual = 0; 
+let indiceElemento = 0; 
 let score = 0;
 let elementoAtual = {};
 const questionElement = document.getElementById('question');
@@ -133,41 +183,43 @@ const responderBtn = document.getElementById('responderBtn');
 const restartBtn = document.getElementById('restartBtn');
 const gameContainer = document.querySelector('.game-container');
 const gameOver = document.querySelector('.game-over');
+let questoesRestantes = 20; // Adicionado para controlar o número de perguntas
 
 // Função para iniciar o jogo
 function iniciarJogo(nivel) {
-    nivelAtual = nivel; // Define o nível atual
+    nivelAtual = nivel; 
     score = 0;
-    feedbackElement.innerHTML = ''; // Limpar feedback
+    indiceElemento = 0; 
+    questoesRestantes = 20; // Reseta para 20 perguntas
+    feedbackElement.innerHTML = ''; 
     gameOver.style.display = 'none';
     gameContainer.style.display = 'block';
 
-    // Se o nível for 1, reinicia o índice dos elementos
-    if (nivelAtual === 1) {
-        indiceElemento = 0; // Começa do primeiro elemento
-        nextElemento(); // Chama o próximo elemento em ordem
-    } else {
-        nextElemento(); // Para os outros níveis, escolhe aleatoriamente
-    }
+    nextElemento(); // Chama o próximo elemento
 }
 
 // Função para escolher o próximo elemento
 function nextElemento() {
-    // Para o nível 1, use o índice atual
+    if (questoesRestantes <= 0) {
+        finalizarJogo(); // Finaliza se as perguntas acabaram
+        return;
+    }
+
     if (nivelAtual === 1) {
-        if (indiceElemento >= elementos.length) {
-            finalizarJogo(); // Finaliza o jogo se todos os elementos foram usados
-            return;
-        }
-        elementoAtual = elementos[indiceElemento]; // Seleciona o elemento na ordem
-        indiceElemento++; // Incrementa o índice para o próximo elemento
-    } else {
-        const index = Math.floor(Math.random() * elementos.length);
-        elementoAtual = elementos[index]; // Para níveis diferentes, seleciona aleatoriamente
+        // Fase 1: Ordem dos primeiros 20 elementos
+        elementoAtual = fase1Elementos[indiceElemento];
+    } else if (nivelAtual === 2) {
+        // Fase 2: Elementos intermediários
+        elementoAtual = fase2Elementos[indiceElemento];
+    } else if (nivelAtual === 3) {
+        // Fase 3: Elementos mais difíceis
+        elementoAtual = fase3Elementos[indiceElemento];
     }
 
     questionElement.innerHTML = `Qual é o nome do elemento com o símbolo "${elementoAtual.symbol}"?`;
     hintElement.innerHTML = elementoAtual.hint;
+    indiceElemento++; // Incrementa o índice para o próximo elemento
+    questoesRestantes--; // Reduz uma questão
 }
 
 // Função para verificar a resposta do usuário
@@ -184,25 +236,58 @@ function verificarResposta() {
 }
 
 // Função para finalizar o jogo
+// Função para finalizar o jogo
 function finalizarJogo() {
     gameContainer.style.display = 'none';
     gameOver.style.display = 'block';
+    
+    // Exibe a pontuação final
     document.getElementById('finalScore').innerHTML = `Sua pontuação final é ${score}.`;
+
+    // Exibe a mensagem baseada no número de acertos
+    let mensagemFinal = '';
+    
+    if (score <= 5) {
+        mensagemFinal = 'Você acertou poucos elementos. Não desanime, continue praticando!';
+    } else if (score <= 10) {
+        mensagemFinal = 'Bom trabalho! Você está no caminho certo. Continue se esforçando!';
+    } else if (score <= 15) {
+        mensagemFinal = 'Ótimo! Você já tem um bom conhecimento sobre os elementos!';
+    } else {
+        mensagemFinal = 'Excelente! Você é um expert em elementos da tabela periódica!';
+    }
+    
+    document.getElementById('mensagemFinal').innerHTML = mensagemFinal;
 }
+
 
 // Adicionando eventos aos botões
 document.getElementById('fase1').addEventListener('click', () => {
-    gameContainer.style.display = 'none'; // Esconde a tela inicial
+    gameContainer.style.display = 'none';
     iniciarJogo(1); // Inicia o jogo no nível 1
 });
 document.getElementById('fase2').addEventListener('click', () => {
-    gameContainer.style.display = 'none'; // Esconde a tela inicial
+    gameContainer.style.display = 'none';
     iniciarJogo(2); // Inicia o jogo no nível 2
 });
 document.getElementById('fase3').addEventListener('click', () => {
-    gameContainer.style.display = 'none'; // Esconde a tela inicial
+    gameContainer.style.display = 'none';
     iniciarJogo(3); // Inicia o jogo no nível 3
 });
 
 responderBtn.addEventListener('click', verificarResposta);
 restartBtn.addEventListener('click', iniciarJogo);
+
+//QRCODE
+const qrCodeBtn = document.getElementById('qrCodeBtn');
+const qrCodeOverlay = document.getElementById('qrCodeOverlay');
+
+// Quando o botão for clicado, exibe ou esconde o QR code
+qrCodeBtn.addEventListener('click', () => {
+    qrCodeOverlay.style.display = 'flex'; // Exibe a sobreposição do QR code
+});
+
+// Quando clicar na sobreposição, esconde o QR code
+qrCodeOverlay.addEventListener('click', () => {
+    qrCodeOverlay.style.display = 'none'; // Esconde a sobreposição do QR code
+});
